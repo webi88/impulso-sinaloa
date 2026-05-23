@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-light text-slate font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+}
+
+@layer utilities {
+  .container-max {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-20 lg:py-28;
+  }
+
+  .gold-accent {
+    @apply text-gold-500;
+  }
+
+  .teal-accent {
+    @apply text-teal-500;
+  }
+
+  .gradient-navy {
+    background: linear-gradient(135deg, #0d2b45 0%, #1a3a5e 100%);
+  }
+
+  .gradient-teal-gold {
+    background: linear-gradient(135deg, #0fa3a3 0%, #d4a017 100%);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Diagonal decorative dividers */
+.diagonal-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.diagonal-top {
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F2F4F1;
+}
+::-webkit-scrollbar-thumb {
+  background: #0fa3a3;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0d2b45;
+}
