@@ -30,18 +30,18 @@ export default function Home() {
                 <span className="text-teal-500">futuro de Sinaloa</span>
               </h2>
               <p className="text-navy-700/70 text-base leading-relaxed mb-4">
-                Impulso Sinaloa es una alianza ciudadana y empresarial que nace del
-                convencimiento de que Sinaloa tiene todo el potencial para crecer, pero
-                necesita certeza, inversión y oportunidades reales para su gente.
+                Impulso Sinaloa nace de una idea sencilla: nuestro estado tiene talento,
+                jóvenes preparados y familias que quieren salir adelante, pero necesita
+                más oportunidades reales para crecer.
               </p>
               <p className="text-navy-700/70 text-base leading-relaxed mb-4">
-                No somos un partido político. Somos empresarios, jóvenes, trabajadores,
-                estudiantes y ciudadanos que creemos en el diálogo basado en evidencia y
-                en propuestas concretas.
+                Somos estudiantes, trabajadores, familias, profesionistas y ciudadanos
+                que creemos en el diálogo, la evidencia y las propuestas concretas para
+                construir más oportunidades en Sinaloa.
               </p>
               <p className="text-navy-700/70 text-base leading-relaxed">
-                Nuestro objetivo es claro: construir el Sinaloa donde nuestros jóvenes
-                puedan desarrollarse sin tener que irse.
+                Queremos un Sinaloa donde estudiar, trabajar y construir futuro no
+                signifique tener que irse.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 {["Diálogo con evidencia", "Propuestas concretas", "Sin colores partidistas"].map((tag) => (

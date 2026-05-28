@@ -7,9 +7,9 @@ import AnimateOnScroll from "./AnimateOnScroll";
 const PILARES = [
   {
     icon: TrendingUp,
-    title: "Inversión Responsable",
+    title: "Valor para Sinaloa",
     description:
-      "Atraemos capital que genera valor real: empleos formales, proveedores locales y compromisos ambientales verificables. No toda inversión es igual — exigimos la que Sinaloa merece.",
+      "Promovemos inversiones que fortalezcan la economía local, impulsen a empresas sinaloenses y generen beneficios que permanezcan en la región.",
     color: "from-teal-500 to-teal-700",
     accent: "bg-teal-500/10 border-teal-500/20",
     textColor: "text-teal-400",
@@ -18,7 +18,7 @@ const PILARES = [
     icon: Briefcase,
     title: "Empleo Digno",
     description:
-      "Trabajo formal, salarios competitivos y oportunidades reales para los jóvenes sinaloenses. Queremos que el talento de nuestra gente se desarrolle aquí, no en otro estado.",
+      "Trabajo formal, mejores salarios y oportunidades reales para jóvenes que estudian, se preparan y quieren construir su futuro en Sinaloa.",
     color: "from-gold-500 to-gold-700",
     accent: "bg-gold-500/10 border-gold-500/20",
     textColor: "text-gold-400",
@@ -27,7 +27,7 @@ const PILARES = [
     icon: MapPin,
     title: "Desarrollo Regional",
     description:
-      "Sinaloa es más que Culiacán. El desarrollo tiene que llegar a cada municipio, fortalecer el campo, la costa y las comunidades que sostienen la economía del estado.",
+      "Que las oportunidades lleguen a más municipios, comunidades y familias. El desarrollo también debe sentirse en la vida diaria de quienes viven y trabajan en Sinaloa.",
     color: "from-navy-400 to-navy-600",
     accent: "bg-navy-400/10 border-navy-400/20",
     textColor: "text-navy-300",
@@ -36,7 +36,7 @@ const PILARES = [
     icon: Shield,
     title: "Seguridad y Certeza",
     description:
-      "Sin seguridad no hay inversión, y sin inversión no hay empleo que aleje a la gente de la ilegalidad. Rompemos este círculo vicioso con propuestas concretas y diálogo con evidencia.",
+      "Cuando hay empleo y oportunidades, también hay más caminos para que las y los jóvenes construyan un futuro lejos de la ilegalidad.",
     color: "from-teal-600 to-navy-700",
     accent: "bg-teal-600/10 border-teal-600/20",
     textColor: "text-teal-300",
