@@ -74,7 +74,7 @@ export default function Hero() {
       {/* Background image — mobile only */}
       <div className="absolute inset-0 lg:hidden">
         <img
-          src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80"
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80"
           alt="Jóvenes de Sinaloa"
           className="w-full h-full object-cover object-center"
         />

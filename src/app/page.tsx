@@ -55,7 +55,7 @@ export default function Home() {
               <div className="relative pb-4 pl-4">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                   <img
-                    src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&q=85"
+                    src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&q=85"
                     alt="Impulso Sinaloa"
                     className="w-full object-cover aspect-[4/3]"
                   />
