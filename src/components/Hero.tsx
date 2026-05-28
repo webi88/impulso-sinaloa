@@ -50,112 +50,170 @@ function CountUp({ target, suffix }: { target: number; suffix: string }) {
   );
 }
 
+const HERO_PHOTOS = [
+  {
+    src: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=900&q=85",
+    alt: "Graduados sinaloenses",
+    cls: "col-span-2 h-56",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=700&q=85",
+    alt: "Estudiantes universitarios",
+    cls: "h-44",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=700&q=85",
+    alt: "Joven profesional sinaloense",
+    cls: "h-44",
+  },
+];
+
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden bg-navy-800">
-      {/* Background image with overlay */}
-      <div className="absolute inset-0">
+    <section className="relative min-h-screen flex flex-col overflow-hidden bg-navy-900">
+      {/* Background image — mobile only */}
+      <div className="absolute inset-0 lg:hidden">
         <img
-          src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1920&q=80"
-          alt="Sinaloa"
+          src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=80"
+          alt="Jóvenes de Sinaloa"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-900/95 via-navy-800/85 to-navy-800/60" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 via-transparent to-transparent" />
       </div>
 
-      {/* Decorative teal diagonal line */}
+      {/* Desktop: dark gradient base */}
+      <div className="absolute inset-0 hidden lg:block bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900" />
+
+      {/* Decorative bottom line */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-teal-500 via-gold-500 to-teal-500 opacity-60" />
 
-      {/* Gold accent shape */}
+      {/* Gold accent blob */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 0.12, scale: 1 }}
         transition={{ duration: 1.5, delay: 0.3 }}
-        className="absolute top-1/3 right-10 w-72 h-72 rounded-full bg-gold-500 blur-3xl"
+        className="absolute top-1/3 right-10 w-72 h-72 rounded-full bg-gold-500 blur-3xl pointer-events-none"
       />
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 0.1, scale: 1 }}
         transition={{ duration: 1.5, delay: 0.6 }}
-        className="absolute top-10 right-1/3 w-96 h-96 rounded-full bg-teal-500 blur-3xl"
+        className="absolute top-10 right-1/3 w-96 h-96 rounded-full bg-teal-500 blur-3xl pointer-events-none"
       />
 
       {/* Content */}
       <div className="relative z-10 flex-1 flex flex-col justify-center container-max pt-24 pb-16">
-        <div className="max-w-3xl">
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-teal-400/40 bg-teal-500/10 text-teal-300 text-sm font-medium mb-6"
-          >
-            <TrendingUp className="w-4 h-4" />
-            Frente ciudadano empresarial
-          </motion.div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
 
-          {/* Main headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.35 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-3"
-          >
-            Sinaloa
-          </motion.h1>
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6"
-          >
-            <span className="text-gold-400">merece</span>{" "}
-            <span className="text-teal-400">CRECER.</span>
-          </motion.h1>
-
-          {/* Gold divider */}
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
-            className="w-16 h-1 bg-gold-500 mb-6 origin-left"
-          />
-
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.9 }}
-            className="text-white/75 text-lg sm:text-xl leading-relaxed mb-10 max-w-xl"
-          >
-            Trabajo digno, inversión responsable y futuro para nuestras comunidades.
-            Construyamos juntos el Sinaloa que merecemos.
-          </motion.p>
-
-          {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.05 }}
-            className="flex flex-wrap gap-4"
-          >
-            <Link
-              href="/noticias"
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-teal-500 hover:bg-teal-400 text-white font-bold rounded-xl transition-all shadow-lg shadow-teal-900/30 hover:shadow-teal-500/30 hover:-translate-y-0.5"
+          {/* ── Left: text ── */}
+          <div className="max-w-2xl">
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-teal-400/40 bg-teal-500/10 text-teal-300 text-sm font-medium mb-6"
             >
-              Ver noticias <ArrowRight className="w-4 h-4" />
-            </Link>
-            <a
-              href="#pilares"
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById("pilares")?.scrollIntoView({ behavior: "smooth" });
-              }}
-              className="inline-flex items-center gap-2 px-7 py-3.5 border-2 border-white/30 text-white hover:border-gold-500 hover:text-gold-400 font-bold rounded-xl transition-all"
+              <TrendingUp className="w-4 h-4" />
+              Frente ciudadano empresarial
+            </motion.div>
+
+            {/* Main headline */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.35 }}
+              className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-3"
             >
-              Nuestros pilares
-            </a>
+              Sinaloa
+            </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.5 }}
+              className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6"
+            >
+              <span className="text-gold-400">merece</span>{" "}
+              <span className="text-teal-400">CRECER.</span>
+            </motion.h1>
+
+            {/* Gold divider */}
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+              className="w-16 h-1 bg-gold-500 mb-6 origin-left"
+            />
+
+            {/* Subtitle */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.9 }}
+              className="text-white/75 text-lg sm:text-xl leading-relaxed mb-10 max-w-xl"
+            >
+              Trabajo digno, inversión responsable y futuro para nuestras comunidades.
+              Construyamos juntos el Sinaloa que merecemos.
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.05 }}
+              className="flex flex-wrap gap-4"
+            >
+              <Link
+                href="/noticias"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-teal-500 hover:bg-teal-400 text-white font-bold rounded-xl transition-all shadow-lg shadow-teal-900/30 hover:shadow-teal-500/30 hover:-translate-y-0.5"
+              >
+                Ver noticias <ArrowRight className="w-4 h-4" />
+              </Link>
+              <a
+                href="#pilares"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById("pilares")?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="inline-flex items-center gap-2 px-7 py-3.5 border-2 border-white/30 text-white hover:border-gold-500 hover:text-gold-400 font-bold rounded-xl transition-all"
+              >
+                Nuestros pilares
+              </a>
+            </motion.div>
+          </div>
+
+          {/* ── Right: photo collage — desktop only ── */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="hidden lg:grid grid-cols-2 gap-3"
+          >
+            {HERO_PHOTOS.map((photo, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.85 + i * 0.15 }}
+                className={`${photo.cls} rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10`}
+              >
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+            ))}
+            {/* Caption strip under collage */}
+            <div className="col-span-2 flex items-center justify-center gap-6 pt-1">
+              {["Talento", "Inversión", "Futuro"].map((word, i) => (
+                <span key={word} className="flex items-center gap-2 text-xs font-semibold text-white/40">
+                  {i > 0 && <span className="w-1 h-1 rounded-full bg-gold-500/60" />}
+                  {word}
+                </span>
+              ))}
+            </div>
           </motion.div>
         </div>
 
@@ -164,7 +222,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-0 border border-white/10 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm"
+          className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-0 border border-white/10 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm"
         >
           {STATS.map((stat, i) => (
             <div

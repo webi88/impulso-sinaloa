@@ -20,7 +20,7 @@ export const posts: Post[] = [
     category: "Juventud",
     date: "20 May 2026",
     readTime: "6 min",
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=85",
+    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&q=85",
     author: "Equipo Impulso Sinaloa",
     authorRole: "Trabajo, Inversión y Futuro",
     content: `
@@ -57,7 +57,7 @@ export const posts: Post[] = [
     category: "Inversión",
     date: "18 May 2026",
     readTime: "8 min",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=85",
+    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&q=85",
     author: "Equipo Impulso Sinaloa",
     authorRole: "Trabajo, Inversión y Futuro",
     content: `
@@ -94,7 +94,7 @@ export const posts: Post[] = [
     category: "Seguridad",
     date: "15 May 2026",
     readTime: "7 min",
-    image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=85",
+    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&q=85",
     author: "Equipo Impulso Sinaloa",
     authorRole: "Trabajo, Inversión y Futuro",
     content: `
@@ -131,7 +131,7 @@ export const posts: Post[] = [
     category: "Educación",
     date: "12 May 2026",
     readTime: "6 min",
-    image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200&q=85",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=85",
     author: "Equipo Impulso Sinaloa",
     authorRole: "Trabajo, Inversión y Futuro",
     content: `
@@ -168,7 +168,7 @@ export const posts: Post[] = [
     category: "Desarrollo",
     date: "8 May 2026",
     readTime: "9 min",
-    image: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1200&q=85",
+    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1200&q=85",
     author: "Equipo Impulso Sinaloa",
     authorRole: "Trabajo, Inversión y Futuro",
     content: `
