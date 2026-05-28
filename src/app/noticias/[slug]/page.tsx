@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { posts } from "@/lib/posts";
+import { fetchPosts, fetchPost } from "@/lib/supabase";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Calendar, Clock, ArrowLeft, ArrowRight } from "lucide-react";
@@ -10,12 +10,15 @@ interface Props {
   params: { slug: string };
 }
 
+export const revalidate = 60;
+
 export async function generateStaticParams() {
+  const posts = await fetchPosts();
   return posts.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: Props) {
-  const post = posts.find((p) => p.slug === params.slug);
+  const post = await fetchPost(params.slug);
   if (!post) return {};
   return {
     title: `${post.title} — Impulso Sinaloa`,
@@ -23,13 +26,14 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default function ArticlePage({ params }: Props) {
-  const post = posts.find((p) => p.slug === params.slug);
+export default async function ArticlePage({ params }: Props) {
+  const post = await fetchPost(params.slug);
   if (!post) notFound();
 
-  const currentIndex = posts.findIndex((p) => p.slug === params.slug);
-  const prev = currentIndex > 0 ? posts[currentIndex - 1] : null;
-  const next = currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null;
+  const allPosts = await fetchPosts();
+  const currentIndex = allPosts.findIndex((p) => p.slug === params.slug);
+  const prev = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
+  const next = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
 
   return (
     <>

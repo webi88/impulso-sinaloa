@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { posts } from "@/lib/posts";
+import { fetchPosts } from "@/lib/supabase";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
@@ -10,6 +10,7 @@ export const metadata = {
   description: "Análisis, información y perspectivas sobre el desarrollo y futuro de Sinaloa.",
 };
 
+
 const categoryColors: Record<string, string> = {
   Juventud: "bg-teal-100 text-teal-700",
   Inversión: "bg-gold-100 text-gold-700",
@@ -18,7 +19,10 @@ const categoryColors: Record<string, string> = {
   Desarrollo: "bg-gold-50 text-gold-600",
 };
 
-export default function NoticiasPage() {
+export const revalidate = 60;
+
+export default async function NoticiasPage() {
+  const posts = await fetchPosts();
   return (
     <>
       <Navbar />
