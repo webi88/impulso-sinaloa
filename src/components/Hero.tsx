@@ -74,7 +74,7 @@ export default function Hero() {
       {/* Background image — mobile only */}
       <div className="absolute inset-0 lg:hidden">
         <img
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=80"
+          src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1200&q=80"
           alt="Jóvenes de Sinaloa"
           className="w-full h-full object-cover object-center"
         />
@@ -124,7 +124,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.35 }}
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-3"
+              className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-[1.05] mb-0"
             >
               Sinaloa
             </motion.h1>
