@@ -94,7 +94,7 @@ export const posts: Post[] = [
     category: "Seguridad",
     date: "15 May 2026",
     readTime: "7 min",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&q=85",
+    image: "https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?w=1200&q=85",
     author: "Equipo Impulso Sinaloa",
     authorRole: "Trabajo, Inversión y Futuro",
     content: `
@@ -131,7 +131,7 @@ export const posts: Post[] = [
     category: "Educación",
     date: "12 May 2026",
     readTime: "6 min",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&q=85",
+    image: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=1200&q=85",
     author: "Equipo Impulso Sinaloa",
     authorRole: "Trabajo, Inversión y Futuro",
     content: `
